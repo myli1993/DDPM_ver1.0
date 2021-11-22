@@ -1,5 +1,5 @@
 function [snow_Mdl,waterjudge,output_1dy_formodel]=ehm_Evap_judge(input_1dy,output_1dy,A)
-% load('F:\文章\水文模型\data\2.1evap\eva_prepare.mat');
+% load('F:\脦脛脮脗\脣庐脦脛脛拢脨脥\data\2.1evap\eva_prepare.mat');
 % input_element={'prec','temp','lrad','srad','shum','wind','pres','SMroot','SMsurf','BD','SAND','SILT','CLAY','VMC1','VMC2','VMC3','OC',...
 %     'FVC','NPP','LAI','BSA_VIS','WSA_VIS','BSA_NIR','WSA_NIR','BSA_SW','WSA_SW'};
 % output_element={'E','Eb','Ei','Ep','Es','Et','Ew'};
