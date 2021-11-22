@@ -20,7 +20,7 @@ else
     res03=[];
 end
 %%
-load('F:\文章\水文模型\data\1.3regroup\shape.mat');
+load('F:\脦脛脮脗\脣庐脦脛脛拢脨脥\data\1.3regroup\shape.mat');
 daily_format='yyyy-mm-dd';
 for i=1:length(t_daily)
    date=datestr(t_daily(i),daily_format); 
