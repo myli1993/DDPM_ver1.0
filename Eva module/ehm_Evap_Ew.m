@@ -1,15 +1,15 @@
 %% ----- Ew_1dy ----- %%
 clc;clear;
-addpath('F:\文章\水文模型\m');
-load('F:\文章\水文模型\data\1.3regroup\shape.mat')
+addpath('F:\鏂囩珷\姘存枃妯″瀷\m');
+load('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\shape.mat')
 element_Ew={'pres','wind','temp'};
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\1dy\',element_Ew{1},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\1dy\',element_Ew{1},'.mat'),'data2');
 pres=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\1dy\',element_Ew{2},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\1dy\',element_Ew{2},'.mat'),'data2');
 wind=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\1dy\',element_Ew{3},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\1dy\',element_Ew{3},'.mat'),'data2');
 temp=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\Ew.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\Ew.mat'),'data2');
 Ew_val=dataread.data2;
 a=8.10765;b=1750.286;c=235;
 for i=1:size(A,1)
@@ -33,20 +33,20 @@ for i=1:size(A,1)
         end
     end
 end
-save('F:\文章\水文模型\data\2.1evap\Ew\Ew_1dy.mat','Ew');
+save('F:\鏂囩珷\姘存枃妯″瀷\data\2.1evap\Ew\Ew_1dy.mat','Ew');
 
 %% ----- Ew_3hr ----- %%
 clc;clear;
-addpath('F:\文章\水文模型\m');
-load('F:\文章\水文模型\data\1.3regroup\shape.mat')
+addpath('F:\鏂囩珷\姘存枃妯″瀷\m');
+load('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\shape.mat')
 element_Ew={'pres','wind','temp'};
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\3hr\',element_Ew{1},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\3hr\',element_Ew{1},'.mat'),'data2');
 pres=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\3hr\',element_Ew{2},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\3hr\',element_Ew{2},'.mat'),'data2');
 wind=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\3hr\',element_Ew{3},'.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\3hr\',element_Ew{3},'.mat'),'data2');
 temp=dataread.data2;
-dataread=load(strcat('F:\文章\水文模型\data\1.3regroup\Ew.mat'),'data2');
+dataread=load(strcat('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\Ew.mat'),'data2');
 Ew_val=dataread.data2;
 a=8.10765;b=1750.286;c=235;
 for i=1:size(A,1)
@@ -71,4 +71,4 @@ for i=1:size(A,1)
         end
     end
 end
-save('F:\文章\水文模型\data\2.1evap\Ew\Ew_3hr.mat','Ew');
+save('F:\鏂囩珷\姘存枃妯″瀷\data\2.1evap\Ew\Ew_3hr.mat','Ew');
