@@ -10,7 +10,7 @@ for i=1:size(A,1)
         if A(i,j)==1
             num_sample=size(input_1dy{i,j},1);
             num_train=floor(num_sample*k_train);
-            train_x=input_1dy{i,j}(1:num_train,:)';%ĞĞÎª±äÁ¿£¬ÁĞÎªĞòÁĞ
+            train_x=input_1dy{i,j}(1:num_train,:)';%è¡Œä¸ºå˜é‡ï¼Œåˆ—ä¸ºåºåˆ—
             test_x=input_1dy{i,j}(num_train+1:end,:)';
             train_y=output_1dy{i,j}(1:num_train,:)';
             test_y=output_1dy{i,j}(num_train+1:end,:)';
@@ -20,18 +20,18 @@ for i=1:size(A,1)
             test_y=method('apply',test_y,output_ps);
             [m,n1]=size(train_x);
             [~,n2]=size(test_x);
-            trainD=reshape(train_x,[m,1,1,n1]);%ÑµÁ·¼¯ÊäÈë
-            testD=reshape(test_x,[m,1,1,n2]);%²âÊÔ¼¯ÊäÈë
-            targetD=train_y;%ÑµÁ·¼¯Êä³ö
-            targetD_test=test_y;%²âÊÔ¼¯Êä³ö
-            layers = [imageInputLayer([m 1 1]) %ÊäÈë²ã²ÎÊıÉèÖÃ
-                convolution2dLayer(3,16,'Padding','same')%ºË´óĞ¡¡¢ÊıÁ¿£¬Ìî³ä·½Ê½
-                reluLayer%relu¼¤»îº¯Êı
-                fullyConnectedLayer(384) % 384 È«Á¬½Ó²ãÉñ¾­Ôª
-                fullyConnectedLayer(384) % 384 È«Á¬½Ó²ãÉñ¾­Ôª
-                fullyConnectedLayer(7) % Êä³ö²ãÉñ¾­Ôª
-                regressionLayer];%Ìí¼Ó»Ø¹é²ã£¬ÓÃÓÚ¼ÆËãËğÊ§Öµ
-            % ÉèÖÃµü´ú´ÎÊı batchsize Ñ§Ï°ÂÊÉ¶µÄ
+            trainD=reshape(train_x,[m,1,1,n1]);%è®­ç»ƒé›†è¾“å…¥
+            testD=reshape(test_x,[m,1,1,n2]);%æµ‹è¯•é›†è¾“å…¥
+            targetD=train_y;%è®­ç»ƒé›†è¾“å‡º
+            targetD_test=test_y;%æµ‹è¯•é›†è¾“å‡º
+            layers = [imageInputLayer([m 1 1]) %è¾“å…¥å±‚å‚æ•°è®¾ç½®
+                convolution2dLayer(3,16,'Padding','same')%æ ¸å¤§å°ã€æ•°é‡ï¼Œå¡«å……æ–¹å¼
+                reluLayer%reluæ¿€æ´»å‡½æ•°
+                fullyConnectedLayer(384) % 384 å…¨è¿æ¥å±‚ç¥ç»å…ƒ
+                fullyConnectedLayer(384) % 384 å…¨è¿æ¥å±‚ç¥ç»å…ƒ
+                fullyConnectedLayer(7) % è¾“å‡ºå±‚ç¥ç»å…ƒ
+                regressionLayer];%æ·»åŠ å›å½’å±‚ï¼Œç”¨äºè®¡ç®—æŸå¤±å€¼
+            % è®¾ç½®è¿­ä»£æ¬¡æ•° batchsize å­¦ä¹ ç‡å•¥çš„
             options = trainingOptions('adam', ...
                 'MaxEpochs',10, ...
                 'MiniBatchSize',16, ...
@@ -39,10 +39,10 @@ for i=1:size(A,1)
                 'GradientThreshold',1, ...
                 'Verbose',false,...
                 'ValidationData',{testD,targetD_test'});%                'Plots','training-progress',...
-            % ÑµÁ·
+            % è®­ç»ƒ
             net{i,j} = trainNetwork(trainD,targetD',layers,options);
             YPred = predict(net{i,j},testD);
-            YPred=double(YPred');%Êä³öÊÇn*1µÄsingleĞÍÊı¾İ£¬Òª×ª»»Îª1*nµÄdoubleÊÇÊı¾İĞÎÊ½
+            YPred=double(YPred');%è¾“å‡ºæ˜¯n*1çš„singleå‹æ•°æ®ï¼Œè¦è½¬æ¢ä¸º1*nçš„doubleæ˜¯æ•°æ®å½¢å¼
             predict_value{i,j}=method('reverse',YPred,output_ps);predict_value{i,j}=double(abs(predict_value{i,j}));
             true_value{i,j}=method('reverse',targetD_test,output_ps);true_value{i,j}=double(true_value{i,j});
             if sum(output_1dy{i,j}(:,7))==0
@@ -50,17 +50,17 @@ for i=1:size(A,1)
             end
             rsquare{i,j}=min(min(corrcoef(true_value{i,j},predict_value{i,j})))^.2;
             rmse{i,j}=sqrt(mean((true_value{i,j}-predict_value{i,j}).^2));
-%             disp(['¸ù¾ù·½²î(RMSE)£º',num2str(rmse)])
+%             disp(['æ ¹å‡æ–¹å·®(RMSE)ï¼š',num2str(rmse)])
             mae{i,j}=mean(abs(true_value{i,j}-predict_value{i,j}));
-%             disp(['Æ½¾ù¾ø¶ÔÎó²î£¨MAE£©£º',num2str(mae)])
+%             disp(['å¹³å‡ç»å¯¹è¯¯å·®ï¼ˆMAEï¼‰ï¼š',num2str(mae)])
             mape{i,j}=mean(abs((true_value{i,j}-predict_value{i,j})./true_value{i,j}));
-%             disp(['Æ½¾ùÏà¶Ô°Ù·ÖÎó²î£¨MAPE£©£º',num2str(mape*100),'%'])
+%             disp(['å¹³å‡ç›¸å¯¹ç™¾åˆ†è¯¯å·®ï¼ˆMAPEï¼‰ï¼š',num2str(mape*100),'%'])
 
 %%
             [m3,n3]=size(input_3hr{i,j});
-            pred_D=reshape(input_3hr{i,j},[m3,1,1,n3]);%²âÊÔ¼¯ÊäÈë
+            pred_D=reshape(input_3hr{i,j},[m3,1,1,n3]);%æµ‹è¯•é›†è¾“å…¥
             Pred_3hr=predict(net{i,j},pred_D);
-            Pred_3hr01=double(Pred_3hr');%Êä³öÊÇn*1µÄsingleĞÍÊı¾İ£¬Òª×ª»»Îª1*nµÄdoubleÊÇÊı¾İĞÎÊ½
+            Pred_3hr01=double(Pred_3hr');%è¾“å‡ºæ˜¯n*1çš„singleå‹æ•°æ®ï¼Œè¦è½¬æ¢ä¸º1*nçš„doubleæ˜¯æ•°æ®å½¢å¼
             pred_Evap{i,j}=method('reverse',Pred_3hr01,output_ps);pred_Evap{i,j}=double(abs(pred_Evap{i,j}));
 
         end
