@@ -16,7 +16,7 @@ In the study of data assimilation and the regulation of measured data, we publis
 [6] Li, M., T. Liu, Y. Luo, L.; et al. Study on soil infiltration process and pedo-transfer functions in semi-arid grasslands (半干旱草原型流域土壤入渗过程及转换函数研究). Journal of Hydraulic Engineering (水利学报), 2019, 50(08): 936-946.
 
 ##############################################################################################################
-In terms of software development and application, we have obtained China National Computer Software copyright:
+In terms of software development and application, we have obtained China National Computer Software Copyright:
 
 [1] 黎明扬, 刘廷玺, 段利民, 等. 基于人工测量的干旱区河流河道流量计算软件（已授权）；
 
@@ -31,6 +31,6 @@ In terms of software development and application, we have obtained China Nationa
 [6] 内蒙古农业大学, 黎明扬, 刘廷玺, 等. 基于RGB阈值法的图像植被盖度反演系统（已授权）.
 
 ##############################################################################################################
-In terms of model theory research, we have obtained China national Invention patent:
+In terms of model theory research, we have obtained China national Invention Patent:
 
 [1] 黎明扬, 段利民, 刘廷玺, 等. 一种草原河流河道流量汇流计算方法（申请中）.
