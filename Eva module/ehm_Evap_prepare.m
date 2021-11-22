@@ -1,19 +1,19 @@
 function [input_1dy,output_1dy,input_3hr]=ehm_Evap_prepare()
-addpath('D:\文章\水文模型\m');
+addpath('D:\鏂囩珷\姘存枃妯″瀷\m');
 %% Load 1dy
-load('D:\文章\水文模型\data\1.3regroup\shape.mat')
+load('D:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\shape.mat')
 element_name={'prec','temp','lrad','srad','shum','wind','pres'};
 for l=1:max(size(element_name))
-    dataread=load(strcat('D:\文章\水文模型\data\1.3regroup\1dy\',element_name{l},'.mat'));
+    dataread=load(strcat('D:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\1dy\',element_name{l},'.mat'));
     eval([element_name{l},'=','dataread.data2',';']);
 end
 element_name={'E','Eb','Ei','Ep','Es','Et','Ew','SMroot','SMsurf','S'};
 for l=1:max(size(element_name))
-    dataread=load(strcat('D:\文章\水文模型\data\1.3regroup\',element_name{l},'.mat'));
+    dataread=load(strcat('D:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\',element_name{l},'.mat'));
     eval([element_name{l},'=','dataread.data2',';']);
 end
 soil=ehm_soilread(A,t,t_daily,1);%1:dy;2:3hr;
-load('D:\文章\水文模型\data\1.1cut\veg\veg5.mat','veg01');
+load('D:\鏂囩珷\姘存枃妯″瀷\data\1.1cut\veg\veg5.mat','veg01');
 %% Merge 1dy
 name_input={'prec','temp','lrad','srad','shum','wind','pres','SMroot','SMsurf'};
 name_output={'E','Eb','Ei','Ep','Es','Et','Ew'};
@@ -40,7 +40,7 @@ end
 %% Load 3hr
 element_name={'prec','temp','lrad','srad','shum','wind','pres'};
 for l=1:max(size(element_name))
-    dataread=load(strcat('D:\文章\水文模型\data\1.3regroup\3hr\',element_name{l},'.mat'));
+    dataread=load(strcat('D:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\3hr\',element_name{l},'.mat'));
     eval([element_name{l},'=','dataread.data2',';']);
 end
 soil=ehm_soilread(A,t,t_daily,2);%1:dy;2:3hr;
