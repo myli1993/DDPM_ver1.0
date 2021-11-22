@@ -1,5 +1,5 @@
 function ehm_Evap_talor(result,veg_type)
-load('F:\文章\水文模型\data\1.3regroup\shape.mat');
+load('F:\鏂囩珷\姘存枃妯″瀷\data\1.3regroup\shape.mat');
 E_label={'E','Eb','Ei','Es','Et','Ew'};
 result_label={'result.Rsq','result.sd'};
 A_num=find(A==1);
@@ -43,6 +43,6 @@ end
 % % hi.NumColumns = 5;
 % set(hi,'Orientation','horizon','Fontname', 'Times New Roman','FontWeight','bold','FontSize',24);
 % set(gcf,'Color','w','Position',[0,0,1650,400],'units','normalized')
-% export_fig(gcf,'-tif','-r300','-painters',['F:/文章/水文模型/pic/pic5/l1.tif']);
+% export_fig(gcf,'-tif','-r300','-painters',['F:/鏂囩珷/姘存枃妯″瀷/pic/pic5/l1.tif']);
 
 
