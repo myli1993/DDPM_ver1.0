@@ -1,6 +1,6 @@
 function [in_flow_1dy,in_flow_3hr,in_tot_1dy,in_tot_3hr,q0,P]=ehm_Flow_prepare()
-load('F:\ÎÄÕÂ\Ë®ÎÄÄ£ĞÍ\I-Eva module\data\2.1evap\eva_result.mat');
-load('F:\ÎÄÕÂ\Ë®ÎÄÄ£ĞÍ\I-Eva module\data\1.3regroup\shape.mat');
+load('F:\æ–‡ç« \æ°´æ–‡æ¨¡å‹\I-Eva module\data\2.1evap\eva_result.mat');
+load('F:\æ–‡ç« \æ°´æ–‡æ¨¡å‹\I-Eva module\data\1.3regroup\shape.mat');
 %% Data
 formatIn = 'yyyy-mm-dd';
 %------ 1dy -----%
@@ -140,7 +140,7 @@ in_tot_3hr(:,8)=mode(dd5,2);
 in_tot_3hr(:,9)=mean(dd6,2);
 in_tot_3hr(:,10)=mean(dd7,2);
 %%
-qdata0=xlsread('F:\ÎÄÕÂ\ºÚ×Ó\data\ori\¾¶Á÷Êı¾İÕûÀí 1963~2012Äê.xlsx','Sheet2');
+qdata0=xlsread('F:\æ–‡ç« \é»‘å­\data\ori\å¾„æµæ•°æ®æ•´ç† 1963~2012å¹´.xlsx','Sheet2');
 q0(:,1:3)=time_1dy;
 for i=1:size(time_1dy)
     yy=time_1dy(i,1);
