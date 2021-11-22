@@ -32,7 +32,7 @@ lai=ehm_dy2hr(lai01,24,3);
 %         end
 %     end
 % end
-load('F:\文章\水文模型\data\2.1evap\eva_vic.mat','pred')
+load('F:\脦脛脮脗\脣庐脦脛脛拢脨脥\data\2.1evap\eva_vic.mat','pred')
 
 
 
