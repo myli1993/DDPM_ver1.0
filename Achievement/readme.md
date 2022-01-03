@@ -1,4 +1,4 @@
-Here, we shows our achievements related to MYEH model, including but not limited to China national computer software copyright, invention patents, papers, etc.
+Here, we shows our achievements related to DDPM (MYEH model), including but not limited to China national computer software copyright, invention patents, papers, etc.
 
 ##############################################################################################################
 In the study of data assimilation and the regulation of measured data, we published the following papers:
