@@ -8,3 +8,5 @@ You can get the example data at: https://zenodo.org/record/5787588.
 Also, you can watch my report on MODSIM 2021 at https://www.bilibili.com/video/BV1vR4y1s7vc.
 
 Our manuscripts are submitting and publishing, we wiil update the data and model in time.
+
+We respect the contributions of every researcher, and for the development and use of more model functions, please contact me at myli.sdwri@gmail.com, and look forward to cooperating with you!
