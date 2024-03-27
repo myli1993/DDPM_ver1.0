@@ -7,6 +7,14 @@ You can get the example data at: https://zenodo.org/record/5787588.
 
 Also, you can watch my report on MODSIM 2021 at https://www.bilibili.com/video/BV1vR4y1s7vc.
 
+-----------------------------------------------------------------------------------------
+
+When using this dataset, please cite:
+
+[1] Li, MY.; Liu, TX.; Duan, LM.; et al. Confluence simulations based on dynamic channel parameters in the grasslands lacking historical measurements. Journal of Hydrology, 2023, Volume 627, 130425. https://doi.org/10.1016/j.jhydrol.2023.130425
+
+-----------------------------------------------------------------------------------------
+
 Our manuscripts are submitting and publishing, we wiil update the data and model in time.
 
 We respect the contributions of every researcher, and for the development and use of more model functions, please contact me at myli.sdwri@gmail.com, and look forward to cooperating with you!
