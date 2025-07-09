@@ -12,6 +12,7 @@ Also, you can watch my report on MODSIM 2021 at https://www.bilibili.com/video/B
 When using this dataset, please cite:
 
 [1] Li, MY.; Liu, TX.; Duan, LM.; et al. Confluence simulations based on dynamic channel parameters in the grasslands lacking historical measurements. Journal of Hydrology, 2023, Volume 627, 130425. https://doi.org/10.1016/j.jhydrol.2023.130425
+
 [2] Li, MY.; Liu, TX.; Duan, LM.; et al. A novel evapotranspiration downscaling approach based on dynamic sensitive parameters and deep learning in the grassland lacking historical measurements. Ecological Indicators, 2025, Volume 178, 113839. https://doi.org/10.1016/j.ecolind.2025.113839
 
 -----------------------------------------------------------------------------------------
